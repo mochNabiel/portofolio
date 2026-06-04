@@ -21,7 +21,7 @@ export const mainStacks: ITechStack[] = [
   },
 ];
 
-export const secondaryStacks : ITechStack[] = [
+export const secondaryStacks: ITechStack[] = [
   {
     name: "GSAP",
     src: "/icons/gsap.svg",
@@ -59,13 +59,88 @@ export const secondaryStacks : ITechStack[] = [
     url: "https://www.vercel.com/",
   },
   {
-    name: "Motion",
-    src: "/icons/motion.svg",
-    height: 30,
-    url: "https://www.motion.dev/",
+    name: "Github",
+    src: "/icons/github.svg",
+    height: 50,
+    url: "https://github.com/",
   },
 ];
 
 export const otherStacks: Partial<ITechStack>[] = [
-    
-]
+  {
+    name: "Bun",
+    src: "/icons/bun.svg",
+  },
+  {
+    name: "CSS",
+    src: "/icons/css.svg",
+  },
+  {
+    name: "Firebase",
+    src: "/icons/firebase.svg",
+  },
+  {
+    name: "Motion",
+    src: "/icons/motion.svg",
+  },
+  {
+    name: "HTML",
+    src: "/icons/html.svg",
+  },
+  {
+    name: "Shadcn UI",
+    src: "/icons/shadcn.svg",
+  },
+  {
+    name: "Figma",
+    src: "/icons/figma.svg",
+  },
+  {
+    name: "Better Auth",
+    src: "/icons/betterauth.svg",
+  },
+  {
+    name: "Vite",
+    src: "/icons/vite.svg",
+  },
+  {
+    name: "MongoDB",
+    src: "/icons/mongodb.svg",
+  },
+  {
+    name: "Neon",
+    src: "/icons/neon.svg",
+  },
+  {
+    name: "Node JS",
+    src: "/icons/nodejs.svg",
+  },
+  {
+    name: "NPM",
+    src: "/icons/npm.svg",
+  },
+  {
+    name: "PostgreSQL",
+    src: "/icons/postgresql.svg",
+  },
+  {
+    name: "Postman",
+    src: "/icons/postman.svg",
+  },
+  {
+    name: "Redis",
+    src: "/icons/redis.svg",
+  },
+  {
+    name: "Tanstack",
+    src: "/icons/tanstack.svg",
+  },
+  {
+    name: "ZOD",
+    src: "/icons/zod.svg",
+  },
+  {
+    name: "Zustand",
+    src: "/icons/zustand.svg",
+  },
+];

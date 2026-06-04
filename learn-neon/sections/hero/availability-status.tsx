@@ -3,13 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { cn } from "@/lib/utils";
-
-const messages = [
-  "Open for Opportunities",
-  "Available for Freelance Work",
-  "Open to New Collaborations",
-  "Available for Hire",
-];
+import { messages } from "@/data/availability-status-msg";
 
 export default function StatusText({ className }: { className?: string }) {
   const [index, setIndex] = useState(0);
@@ -51,14 +45,14 @@ export default function StatusText({ className }: { className?: string }) {
 
   return (
     <div className={cn("flex items-center gap-3", className)}>
+      <div className="relative h-1.5 w-1.5">
+        <span className="bg-primary absolute inset-0 animate-ping rounded-full" />
+        <span className="bg-primary absolute inset-0 rounded-full" />
+      </div>
       <div className="overflow-hidden">
         <span ref={textRef} className="block text-sm font-light uppercase">
           {messages[index]}
         </span>
-      </div>
-      <div className="relative h-1.5 w-1.5">
-        <span className="bg-primary absolute inset-0 animate-ping rounded-full" />
-        <span className="bg-primary absolute inset-0 rounded-full" />
       </div>
     </div>
   );

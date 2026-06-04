@@ -65,7 +65,7 @@ export default function FooterSection() {
       ref={sectionRef}
       className="bg-foreground text-background min-h-screen px-4 py-8 lg:px-8"
     >
-      <h1 className="font-heading text-[clamp(3.5rem,9vw,20rem)] leading-none font-black tracking-wide">
+      <h1 className="font-heading text-[clamp(3.5rem,9vw,20rem)] leading-[1.1] font-black tracking-wide">
         <span className="block overflow-hidden">
           <span
             ref={(el) => {

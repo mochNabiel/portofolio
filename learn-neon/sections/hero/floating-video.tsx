@@ -2,12 +2,17 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { cn } from "@/lib/utils";
 
 interface FloatingVideoProps {
+  src: string;
+  className?: string;
   containerRef: React.RefObject<HTMLElement | null>;
 }
 
 export default function FloatingVideo({
+  src,
+  className,
   containerRef,
 }: FloatingVideoProps) {
   const videoRef = useRef<HTMLDivElement>(null);
@@ -73,15 +78,7 @@ export default function FloatingVideo({
   return (
     <div
       ref={videoRef}
-      className="
-        pointer-events-none
-        absolute
-        top-0
-        left-0
-        z-20
-        hidden
-        lg:block
-      "
+      className="pointer-events-none absolute top-0 left-0 z-20 hidden lg:block"
     >
       <div className="overflow-hidden rounded-3xl shadow-2xl">
         <video
@@ -89,13 +86,9 @@ export default function FloatingVideo({
           muted
           loop
           playsInline
-          className="
-            h-[240px]
-            w-[380px]
-            object-cover
-          "
+          className={cn("h-60 w-95 object-cover", className)}
         >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
+          <source src={src} type="video/mp4" />
         </video>
       </div>
     </div>

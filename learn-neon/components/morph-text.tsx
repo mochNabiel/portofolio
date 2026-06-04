@@ -17,7 +17,7 @@ interface MorphTextProps {
 export default function MorphText({
   text,
   className = "",
-  start = "top 70%",
+  start = "top 90%",
   end = "bottom 50%",
 }: MorphTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -25,7 +25,7 @@ export default function MorphText({
   const completionPoints = useMemo(
     () =>
       text.split("").map(() => {
-        return gsap.utils.random(0.15, 1, 0.1);
+        return gsap.utils.random(0.3, 1, 0.01);
       }),
     [text],
   );

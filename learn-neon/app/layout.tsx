@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import {
-  Anton,
-  Caveat,
-  JetBrains_Mono,
-  Poppins,
-} from "next/font/google";
+import { Anton, JetBrains_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const jetbrains = JetBrains_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
@@ -24,13 +20,7 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-poppins",
-})
-
-const marker = Caveat({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-marker",
-})
+});
 
 export const metadata: Metadata = {
   title: "Nabiel - Fullstack Developer",
@@ -51,11 +41,12 @@ export default function RootLayout({
         anton.variable,
         "font-sans",
         jetbrains.variable,
-        marker.variable,
-        poppins.variable
+        poppins.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <TooltipProvider>{children}</TooltipProvider>
+      </body>
     </html>
   );
 }

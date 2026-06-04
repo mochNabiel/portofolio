@@ -89,12 +89,11 @@ export default function RevealText({
     { scope: containerRef },
   );
 
-  // overflow hidden only makes sense for vertical reveals
   const needsClip = direction === "up" || direction === "down";
 
   return (
     <div ref={containerRef}>
-      <div className={className}>
+      <h1 className={className}>
         {lines.map((line, i) => (
           <span
             key={i}
@@ -111,7 +110,7 @@ export default function RevealText({
             </span>
           </span>
         ))}
-      </div>
+      </h1>
     </div>
   );
 }

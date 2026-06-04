@@ -1,7 +1,7 @@
-import WorkSection from "@/app/_components/footer-section";
-import HeroSection from "@/app/_components/hero-section";
-import Header from "@/app/_components/header";
-import TechStackSection from "./_components/tech-stack-section";
+import WorkSection from "@/sections/footer";
+import HeroSection from "@/sections/hero";
+import Header from "@/sections/header";
+import TechStackSection from "@/sections/tech-stack";
 
 export default function Home() {
   return (
@@ -9,8 +9,8 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <TechStackSection />
         <WorkSection />
+        <TechStackSection />
       </main>
     </div>
   );

@@ -1,4 +1,4 @@
-import WorkSection from "@/sections/footer";
+import FooterSection from "@/sections/footer";
 import HeroSection from "@/sections/hero";
 import Header from "@/sections/header";
 import TechStackSection from "@/sections/tech-stack";
@@ -9,8 +9,8 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <WorkSection />
         <TechStackSection />
+        <FooterSection />
       </main>
     </div>
   );

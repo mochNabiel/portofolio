@@ -14,7 +14,7 @@ export default function PingText({
         <span className="bg-primary absolute inset-0 rounded-full" />
       </div>
 
-      <h2 className="font-medium tracking-[0.2em] uppercase">
+      <h2 className="font-medium text-sm lg:text-base tracking-[0.2em] uppercase">
         {children}
       </h2>
     </div>

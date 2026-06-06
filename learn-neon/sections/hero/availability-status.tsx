@@ -5,10 +5,18 @@ import gsap from "gsap";
 import { cn } from "@/lib/utils";
 import { messages } from "@/data/availability-status-msg";
 
-export default function StatusText({ className }: { className?: string }) {
-  const [index, setIndex] = useState(0);
-  const INTERVAL = 2500;
+interface AvailabilityStatusProps {
+  className?: string;
+  dotPosition?: "left" | "right";
+}
 
+export default function AvailabilityStatus({
+  className,
+  dotPosition = "left",
+}: AvailabilityStatusProps) {
+  const [index, setIndex] = useState(0);
+
+  const INTERVAL = 2500;
   const textRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -43,14 +51,24 @@ export default function StatusText({ className }: { className?: string }) {
     return () => clearInterval(interval);
   }, [index]);
 
+  const Dot = (
+    <div className="relative h-1.5 w-1.5 shrink-0">
+      <span className="bg-primary absolute inset-0 animate-ping rounded-full" />
+      <span className="bg-primary absolute inset-0 rounded-full" />
+    </div>
+  );
+
   return (
-    <div className={cn("flex items-center gap-3", className)}>
-      <div className="relative h-1.5 w-1.5">
-        <span className="bg-primary absolute inset-0 animate-ping rounded-full" />
-        <span className="bg-primary absolute inset-0 rounded-full" />
-      </div>
+    <div
+      className={cn(
+        "flex items-center gap-3",
+        dotPosition === "right" && "flex-row-reverse",
+      )}
+    >
+      {Dot}
+
       <div className="overflow-hidden">
-        <span ref={textRef} className="block text-sm font-light uppercase">
+        <span ref={textRef} className={cn("block text-sm font-light uppercase", className)}>
           {messages[index]}
         </span>
       </div>

@@ -21,7 +21,7 @@ export default function TechStackSection() {
         />
       </div>
 
-      <div className="w-full">
+      <div className="w-full mb-16">
         <PingText>Technologies I Work With</PingText>
 
         <StackGridDesktop />

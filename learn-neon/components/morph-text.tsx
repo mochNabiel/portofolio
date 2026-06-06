@@ -17,8 +17,8 @@ interface MorphTextProps {
 export default function MorphText({
   text,
   className = "",
-  start = "top 90%",
-  end = "bottom 50%",
+  start = "top 70%",
+  end = "top top",
 }: MorphTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
